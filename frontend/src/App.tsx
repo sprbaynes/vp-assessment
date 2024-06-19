@@ -1,9 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import.meta.env.VITE_API_URL
 
 function App() {
+
+  /* TODO: Remove, this is just a quick example */
+  console.log(`VITE_API_URL = ${import.meta.env.VITE_API_URL}`)
+
+  useEffect(()=>{
+    fetch(`${import.meta.env.VITE_API_URL}/posts?page=0&limit=1`,{
+            method: 'GET'}
+    )
+  },[])
+
   const [count, setCount] = useState(0)
 
   return (
