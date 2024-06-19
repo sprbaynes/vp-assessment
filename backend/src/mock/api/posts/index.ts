@@ -1,9 +1,10 @@
-import {readFile} from 'fs/promises'
-import {join} from 'path'
-import { PostsParams } from 'shared/dist/api'
-import {Post, Posts} from 'shared/dist/models'
+import {readFile} from 'fs/promises';
+import {join} from 'path';
+import { PostsParams } from 'shared/dist/api';
+import {Post, Posts} from 'shared/dist/models';
 
 export async function get(params:PostsParams):Promise<Posts>{
+    console.log("mock api get data");
     //read file in
     const {page,limit} = params;
     const pageValid = validatePageParam(page);
@@ -22,7 +23,6 @@ export async function get(params:PostsParams):Promise<Posts>{
         total: posts.length
     };
 
-    console.log("Returning post response")
     return postsResponse;
 }
 
