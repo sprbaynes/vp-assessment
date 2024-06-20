@@ -32,7 +32,7 @@ Both will the backend and frontend will need to be running for successful use.
 
 Complete run instructions can be found below
 
-1. cd to the shared project directory and run `npm run build`
+1. cd to the shared project directory and run `npm install` and then `npm run build`
 2. cd to the backend project directory.
 3. Create a .env file in the backend directory containing the following. 
 ```
