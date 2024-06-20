@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is the frontend part of the assignment. As requested it is a React + TypeScript app created with Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Main features:
+* Infinite scroll triggered every 10 posts
+* Responsive layout
 
-## Expanding the ESLint configuration
+## Running
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run the frontend dev environment please execute the following steps from the frontend directory:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Create a .env file in the frontend directory containing the following. 
 ```
+VITE_API_URL=http://localhost:3000
+```  
+2. Run `npm install` on the command line
+3. Run `npm run dev` on the command line to start the dev server.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The app should now be accessible via the following URL: http://localhost:5173/
+
+Note: The backend express app will need to be running to see the output from the dummy posts api (see backend/README.md)
+
