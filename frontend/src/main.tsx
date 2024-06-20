@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 import './index.css'
 
-
 const navProps:NavProps = {
   logoSrc:"/logos-are-nice.png",
   logoAlt:"VP Assessment Logo",
