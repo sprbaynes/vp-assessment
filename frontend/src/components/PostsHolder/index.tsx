@@ -7,7 +7,7 @@ export type PostsHolderProps = {
 
 export const PostsHolder = ({children}: PostsHolderProps) => {
     return (
-        <section className="flex flex-row flex-wrap max-w-7xl">
+        <section className="mx-auto flex flex-row flex-wrap max-w-screen-lg justify-center bg-slate-200">            
             {children}
         </section>
     )

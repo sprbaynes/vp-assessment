@@ -31,7 +31,7 @@ export const Nav = ({logoSrc, logoAlt, logoWidth, logoHeight, openNavScreenReade
     const [navOpen, setNavOpen] = useState(false)
 
     return (
-      <nav className="mx-auto bg-slate-700 text-gray-200 flex flex-col justify-start max-w-6xl text-sm font-medium min-h-[13vh] sm:min-h-[11vh] lg:flex-row lg:px-4 lg:justify-center">
+      <nav className="mx-auto bg-slate-700 text-gray-200 flex flex-col justify-start max-w-screen-lg text-sm font-medium min-h-[13vh] sm:min-h-[11vh] lg:flex-row lg:px-4 lg:justify-center">
         <div className="flex flex-row mt-4 sm:mt-6 lg:mt-0 items-center justify-center lg:justify-start lg:px-8">
           <Link to="/" ><img className="" src={logoSrc} alt={logoAlt} width={logoWidth} height={logoHeight}/></Link>
         </div>
