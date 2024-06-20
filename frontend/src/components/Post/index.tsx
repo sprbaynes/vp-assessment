@@ -21,7 +21,7 @@ export type Owner = {
     picture?: string
 }
 
-export const Post = ({id,image,likes,text,publishDate,owner}:PostProps) => {
+export const Post = ({image,likes,text,publishDate,owner}:PostProps) => {
 
     const parsedDate = moment(publishDate).format('Do MMMM YYYY hh:mm');
 

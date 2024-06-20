@@ -12,8 +12,8 @@ export default function Home() {
     const [error,setError] = useState(false);
 
     const errorHandler = ()=>{
-        setError(true)
-    }
+        setError(true);
+    };
 
     useEffect(()=>{
         fetch(`${import.meta.env.VITE_API_URL}/posts?page=0&limit=10`,{
@@ -31,7 +31,7 @@ export default function Home() {
         .then(data => {
             setPosts((prevItems)=> [...prevItems, ...data.data]);
             data.data.length > 0 ? setHasMore(true) : setHasMore(false);
-        }).catch(errorHandler)
+        }).catch(errorHandler);
 
         setIndex((prevIndex) => prevIndex + 1);
     };
