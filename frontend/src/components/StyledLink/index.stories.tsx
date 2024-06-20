@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {StyledLink} from './index'
+import {StyledLink} from './index';
 
 
 const meta: Meta<typeof StyledLink> = {

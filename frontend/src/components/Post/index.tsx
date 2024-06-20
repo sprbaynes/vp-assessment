@@ -1,7 +1,7 @@
-import React from 'react'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import moment from 'moment'
+import React from 'react';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import moment from 'moment';
 
 export type PostProps = {
     id?: string
@@ -23,7 +23,7 @@ export type Owner = {
 
 export const Post = ({id,image,likes,text,publishDate,owner}:PostProps) => {
 
-    const parsedDate = moment(publishDate).format('Do MMMM YYYY hh:mm')
+    const parsedDate = moment(publishDate).format('Do MMMM YYYY hh:mm');
 
     return (
         <article key={id} className="flex flex-col bg-slate-100 rounded-md p-4 max-w-md mx-2 my-2">
@@ -48,5 +48,5 @@ export const Post = ({id,image,likes,text,publishDate,owner}:PostProps) => {
                 </div>
             </div>
         </article>
-    )
-}
+    );
+};

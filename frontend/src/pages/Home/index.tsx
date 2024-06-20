@@ -1,12 +1,12 @@
-import { PostsHolder } from "../../components/PostsHolder"
-import type { PostProps } from "../../components/Post"
-import {Post} from "../../components/Post"
-import {useState,useEffect} from "react"
+import { PostsHolder } from "../../components/PostsHolder";
+import type { PostProps } from "../../components/Post";
+import {Post} from "../../components/Post";
+import {useState,useEffect} from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function Home() {
 
-    const [posts,setPosts] = useState<PostProps[]>([])
+    const [posts,setPosts] = useState<PostProps[]>([]);
     const [hasMore, setHasMore] = useState(true);
     const [index, setIndex] = useState(1);
 
@@ -15,23 +15,23 @@ export default function Home() {
                 method: 'GET'}
         ).then((res)=> res.json())
         .then(data => {
-            console.log(data)
-            setPosts(data.data)
-        })
-      },[])
+            console.log(data);
+            setPosts(data.data);
+        });
+      },[]);
 
     const fetchMoreData = () => {
         fetch(`${import.meta.env.VITE_API_URL}/posts?page=${index}&limit=10`,{
             method: 'GET'}
         ).then((res)=> res.json())
         .then(data => {
-            console.log(data)
-            setPosts((prevItems)=> [...prevItems, ...data.data])
+            console.log(data);
+            setPosts((prevItems)=> [...prevItems, ...data.data]);
             data.data.length > 0 ? setHasMore(true) : setHasMore(false);
-        })
+        });
 
-        setIndex((prevIndex) => prevIndex + 1)
-    }
+        setIndex((prevIndex) => prevIndex + 1);
+    };
 
     return (    
         <>
@@ -45,11 +45,11 @@ export default function Home() {
                 loader={<div className="mx-auto bg-slate-200 text-center max-w-screen-lg py-2 font-bold">Loading...</div>}
             >
                 <PostsHolder>
-                    {(posts)? posts.map((post,index)=>{
-                        return <Post {...post} />
+                    {(posts)? posts.map((post)=>{
+                        return <Post {...post} />;
                     }):<></>}
                 </PostsHolder>
             </InfiniteScroll>
         </>        
-    )
+    );
 }

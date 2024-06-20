@@ -1,7 +1,8 @@
-import {StyledLink} from '../StyledLink'
-import { useState } from 'react'
-import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import {StyledLink} from '../StyledLink';
+import { useState } from 'react';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 
 export type NavProps = {
@@ -23,12 +24,12 @@ export type NavLinkProps = {
 export const NavLink = ({url, children}:NavLinkProps) => {
     return (
       <StyledLink className="flex flex-col justify-center mx-0 px-10 py-4 lg:py0" href={url}>{children}</StyledLink>
-    )
-}
+    );
+};
 
 export const Nav = ({logoSrc, logoAlt, logoWidth, logoHeight, openNavScreenReaderText, children}:NavProps) => {
 
-    const [navOpen, setNavOpen] = useState(false)
+    const [navOpen, setNavOpen] = useState(false);
 
     return (
       <nav className="mx-auto bg-slate-700 text-gray-200 flex flex-col justify-start max-w-screen-lg text-sm font-medium min-h-[13vh] sm:min-h-[11vh] lg:flex-row lg:px-4 lg:justify-center">
@@ -47,5 +48,5 @@ export const Nav = ({logoSrc, logoAlt, logoWidth, logoHeight, openNavScreenReade
           {children}
         </div>
       </nav>
-    )
-}
+    );
+};

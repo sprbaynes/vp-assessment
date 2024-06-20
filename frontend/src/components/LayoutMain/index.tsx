@@ -1,8 +1,9 @@
+import React from 'react';
 import { Outlet } from "react-router-dom";
-import { Nav } from '../Nav'
-import type { NavProps } from '../Nav'
-import {Footer} from '../Footer'
-import type {FooterProps}  from '../Footer'
+import { Nav } from '../Nav';
+import type { NavProps } from '../Nav';
+import {Footer} from '../Footer';
+import type {FooterProps}  from '../Footer';
 
 type LayoutMainProps = {
     nav?: NavProps,
@@ -23,5 +24,5 @@ export default function LayoutMain({nav, footer}: LayoutMainProps)
                 {footer && <Footer {...footer}/> }
             </main>
         </div>
-    )
+    );
 }

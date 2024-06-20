@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {PostsHolder} from '../PostsHolder'
-import {Post} from '../Post'
+import {PostsHolder} from '../PostsHolder';
+import {Post} from '../Post';
 
 const meta: Meta<typeof PostsHolder> = {
     title: 'Frontend/PostsHolder',
@@ -200,13 +200,13 @@ const meta: Meta<typeof PostsHolder> = {
         "lastName": "Vestering",
         "picture": "https://randomuser.me/api/portraits/med/women/89.jpg"
     }
-}]
+}];
 
   // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
   export const Primary: Story = {
     args: {
-        children: posts.map((post,index)=>{
-            return <Post {...post} />
+        children: posts.map((post)=>{
+            return <Post {...post} />;
         })
     }
   };

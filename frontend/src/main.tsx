@@ -1,15 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import LayoutMain from './components/LayoutMain';
 import Home from './pages/Home';
-import {NavLink} from './components/Nav'
+import Error from './pages/Error';
+import {NavLink} from './components/Nav';
 import type { NavProps } from './components/Nav';
 import type { FooterProps } from './components/Footer';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
+import './index.css';
 
 const navProps:NavProps = {
   logoSrc:"/logos-are-nice.png",
@@ -22,7 +23,7 @@ const navProps:NavProps = {
       (<NavLink key={"nav-link-1"} url="/about">About</NavLink>),
       (<NavLink key={"nav-link-2"} url="/contact">Contact</NavLink>),
   ]
-}
+};
 
 const footerProps:FooterProps = {
   nav:{
@@ -78,12 +79,13 @@ const footerProps:FooterProps = {
           children:"Privacy Policy"
       }
   ]
-}
+};
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LayoutMain nav={navProps} footer={footerProps}/>,
+    errorElement: <Error />,
     children:[
       {
         index:true,
@@ -97,4 +99,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);
