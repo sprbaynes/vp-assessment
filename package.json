@@ -2,11 +2,17 @@
   "name": "vp-assessment",
   "version": "1.0.0",
   "description": "VP assessment project",
-  "workspaces":["frontend","backend","shared"],
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-router-dom": "^6.23.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
