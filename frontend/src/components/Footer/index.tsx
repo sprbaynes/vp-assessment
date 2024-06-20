@@ -21,7 +21,7 @@ export type FooterProps = {
 
 export const Footer = ({address, nav, contactLinks, additionalLinks}: FooterProps) => {
     return (
-        <footer className="mx-8 text-gray-200 text-sm">
+        <footer className="text-gray-200 text-sm">
             <div className="mx-auto max-w-screen-lg flex flex-row flex-wrap justify-center py-4 bg-slate-700">
                 <div className={`flex flex-col md:px-4 md:w-1/5`}>
                     <img src={nav.logoSrc} alt={nav.logoAlt} width={nav.logoWidth} height={nav.logoHeight}/>
